@@ -1,42 +1,74 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projetos | Portfólio Rafael Martini</title>
-  <link rel="stylesheet" href="../CSS/estilo.css">
-  <link rel="stylesheet" href="../src/App.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - Rafael Martiniano</title>
+    <link rel="stylesheet" href="../CSS/estilo.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <a href="../index.html" class="logo">Portfólio</a>
-      <nav>
-        <a href="apresentacao.html">Apresentação</a>
-        <a href="experiencia.html">Experiência</a>
-        <a href="habilidades.html">Habilidades</a>
-        <a href="projetos.html">Projetos</a>
-        <a href="certificacoes.html">Certificações</a>
-        <a href="contato.html">Contato</a>
-      </nav>
-    </div>
-  </header>
-  <main class="presentation">
-    <div class="presentation-content">
-      <h1>Projetos</h1>
-      <p>Veja todos os meus projetos diretamente no GitHub:</p>
-      <a href="https://github.com/rmartini3/portifoliorm/tree/master/Projetos" target="_blank" class="btn" style="font-size:1.1rem; color:var(--primary,#00796b); text-decoration:underline;">Acessar Projetos no GitHub</a>
-    </div>
-  </main>
-  <footer class="footer">
-    <div class="container">
-      <div class="mb-2">&copy; 2025 Rafael Martini. Todos os direitos reservados.</div>
-      <div class="flex">
-        <a href="https://www.linkedin.com/in/rafael-martiniano/" target="_blank">LinkedIn</a>
-        <a href="mailto:rmartini3corp@outlook.com">Email</a>
-        <a href="https://www.credly.com/users/rafael-martiniano" target="_blank">Credly</a>
-      </div>
-    </div>
-  </footer>
+    <header class="cabecalho-principal">
+        <div class="container cabecalho-conteudo">
+            <div class="logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>Rafael Martiniano</span>
+            </div>
+        </div>
+    </header>
+    <main class="conteudo-principal">
+        <div class="container">
+        <section class="conteudo-secao" id="habilidades">
+                <h2>Projetos</h2>
+                <div class="habilidades-grid">
+                    <div class="habilidade-card">
+                        <i class="fas fa-tools"></i>
+                        <h3>Boas Práticas em Desenvolvimento</h3>
+                        <p>Seguir boas práticas é essencial para manter um código limpo e eficiente.</p>
+                        <p>Aqui estão algumas recomendações:</p><br>
+                        <ul>
+                          <li>Escrever código bem estruturado e documentado.</li>
+                          <li>Seguir princípios de desenvolvimento como SOLID.</li>
+                          <li>Manter um fluxo de versionamento eficiente com Git.</li>
+                          <li>Utilizar testes automatizados sempre que possível.</li>
+                        </ul>
+                    </div>
+                    <div class="habilidade-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Metodologias Ágeis e Scrum</h3>
+                        <p>Scrum é um framework ágil que ajuda na organização e entrega eficiente de projetos.</p>
+                        <br>
+                        <p><strong>Principais conceitos:</strong></p>
+                        <br>
+                        <ul>
+                            <li><strong>Sprints:</strong> Períodos curtos de desenvolvimento com metas definidas.</li>
+                            <li><strong>Daily Stand-ups:</strong> Reuniões rápidas para alinhar tarefas.</li>
+                            <li><strong>Backlog:</strong> Lista organizada de tarefas pendentes.</li>
+                        </ul>
+                      </div>                
+                    <div class="habilidade-card">
+                        <h3>Links Úteis para Estudos</h3>
+                        <p>Aqui estão alguns links que podem ajudar nos estudos:</p>
+                        <br>
+                        <i class="fas fa-link fa-2x" style="color: var(--cor-papel-subtitulo);"></i>
+                        <ul>
+                            <li><a href="https://www.scrumguides.org/">Guia Oficial do Scrum</a></li>
+                            <li><a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
+                            <li><a href="https://docs.oracle.com/">Documentação Oficial da Oracle</a></li>
+                            <li><a href="https://docs.github.com/">Documentação Oficial do Github</a></li>
+                            <li><a href="https://git-scm.com/doc">Documentação Oficial do Git</a></li>
+                            <li><a href="https://learn.microsoft.com/pt-br/powershell/">Portal de aprendizado do Powershell</a></li>
+                        </ul>
+                      </div>
+                </div>
+            </section>
+            <h3 style="text-align: center; border: 0cm; background-color: white;">Link do Portifólio: <a href="https://github.com/rmartini3/portifoliorm/tree/master/Projetos">Github</a></h3>
+            <div style="margin: 2rem 0; text-align: center;">
+                <a href="../index.html" class="btn-secao" style="display:inline-block; margin-top:1rem;">
+                    <i class="fas fa-arrow-left"></i> Voltar para Início
+                </a>
+            </div>
+        </div>
+    </main>
+
 </body>
 </html>
