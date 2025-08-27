@@ -1,0 +1,11 @@
+{
+  "title": "Contacto",
+  "description": "Información de contacto y formulario para enviar mensaje.",
+  "contactInfo": [
+    "Teléfono: (11) 97112-8258",
+    "Email: rmartini3corp@outlook.com",
+    "LinkedIn: linkedin.com/in/rafael-martiniano"
+  ],
+  "sendMessageButton": "Enviar Mensaje",
+  "sendMessageUrl": "mailto:rmartini3corp@outlook.com"
+}

@@ -1,0 +1,38 @@
+{
+  "pt": {
+    "apresentacao": "Apresentação",
+    "habilidades": "Habilidades",
+    "certificacoes": "Certificações",
+    "experiencia": "Experiência",
+    "contato": "Contato",
+    "modoClaro": "Modo claro",
+    "modoEscuro": "Modo escuro",
+    "modoVintage": "Modo vintage",
+    "selecionarIdioma": "Selecionar idioma",
+    "enviar": "Enviar"
+  },
+  "en": {
+    "apresentacao": "Presentation",
+    "habilidades": "Skills",
+    "certificacoes": "Certifications",
+    "experiencia": "Experience",
+    "contato": "Contact",
+    "modoClaro": "Light mode",
+    "modoEscuro": "Dark mode",
+    "modoVintage": "Vintage mode",
+    "selecionarIdioma": "Select language",
+    "enviar": "Send"
+  },
+  "es": {
+    "apresentacao": "Presentación",
+    "habilidades": "Habilidades",
+    "certificacoes": "Certificaciones",
+    "experiencia": "Experiencia",
+    "contato": "Contacto",
+    "modoClaro": "Modo claro",
+    "modoEscuro": "Modo oscuro",
+    "modoVintage": "Modo vintage",
+    "selecionarIdioma": "Seleccionar idioma",
+    "enviar": "Enviar"
+  }
+}

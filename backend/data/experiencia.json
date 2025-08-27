@@ -1,0 +1,14 @@
+{
+  "pt": {
+    "title": "Experiência",
+    "items": ["Desenvolvedor na Empresa X", "Freelancer em projetos web", "Contribuidor open source"]
+  },
+  "en": {
+    "title": "Experience",
+    "items": ["Developer at Company X", "Freelancer in web projects", "Open source contributor"]
+  },
+  "es": {
+    "title": "Experiencia",
+    "items": ["Desarrollador en Empresa X", "Freelancer en projetos web", "Colaborador open source"]
+  }
+}

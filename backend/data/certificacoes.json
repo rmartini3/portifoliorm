@@ -1,0 +1,14 @@
+{
+  "pt": {
+    "title": "Certificações",
+    "items": ["Certificado React", "Certificado Node.js", "Certificado MongoDB"]
+  },
+  "en": {
+    "title": "Certifications",
+    "items": ["React Certificate", "Node.js Certificate", "MongoDB Certificate"]
+  },
+  "es": {
+    "title": "Certificaciones",
+    "items": ["Certificado React", "Certificado Node.js", "Certificado MongoDB"]
+  }
+}

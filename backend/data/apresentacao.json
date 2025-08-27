@@ -1,0 +1,26 @@
+  {
+  "pt": {
+    "title": "Apresentação",
+    "description": "Olá! Meu nome é Rafael Martini, desenvolvedor full stack apaixonado por tecnologia e inovação.",
+    "links": [
+      { "label": "LinkedIn", "url": "https://linkedin.com/in/rafaelmartini" },
+      { "label": "GitHub", "url": "https://github.com/rafaelmartini" }
+    ]
+  },
+  "en": {
+    "title": "Presentation",
+    "description": "Hello! My name is Rafael Martini, a full stack developer passionate about technology and innovation.",
+    "links": [
+      { "label": "LinkedIn", "url": "https://linkedin.com/in/rafaelmartini" },
+      { "label": "GitHub", "url": "https://github.com/rafaelmartini" }
+    ]
+  },
+  "es": {
+    "title": "Presentación",
+    "description": "¡Hola! Mi nombre es Rafael Martini, desarrollador full stack apasionado por la tecnología y la innovación.",
+    "links": [
+      { "label": "LinkedIn", "url": "https://linkedin.com/in/rafaelmartini" },
+      { "label": "GitHub", "url": "https://github.com/rafaelmartini" }
+    ]
+  }
+}

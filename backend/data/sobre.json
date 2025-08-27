@@ -1,0 +1,9 @@
+{
+  "title": "Sobre Mim",
+  "description": "Conheça minha trajetória profissional.",
+  "links": [
+    {"label": "LinkedIn", "url": "https://www.linkedin.com/in/rafael-martiniano/"},
+    {"label": "Email", "url": "mailto:rmartini3corp@outlook.com"},
+    {"label": "Credly", "url": "https://www.credly.com/users/rafael-martiniano"}
+  ]
+}
