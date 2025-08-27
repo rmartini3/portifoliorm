@@ -1,0 +1,19 @@
+{
+  "portfolioTitle": "Portfólio",
+  "portfolioSubtitle1": "Olá, eu sou Rafael Martini",
+  "portfolioSubtitle2": "Desenvolvedor apaixonado por tecnologia, com experiência em diversas áreas de TI e projetos inovadores.",
+  "header": {
+    "home": "Apresentação",
+    "skills": "Habilidades",
+    "experience": "Experiência",
+    "certifications": "Certificações",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "footer": {
+    "copyright": "© 2025 Rafael Martini. Todos os direitos reservados.",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/rafael-martiniano/"
+    }
+  }
+}

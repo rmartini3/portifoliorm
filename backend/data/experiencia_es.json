@@ -1,0 +1,35 @@
+{
+  "title": "Experiencia Profesional",
+  "experiences": [
+    {
+      "title": "Analista Junior de Field Services",
+      "company": "Strati",
+      "period": "Marzo de 2024 – Abril de 2025",
+      "location": "São Paulo, SP",
+      "responsibilities": [
+        "Actuación como Analista Punto Focal",
+        "Mantenimiento preventivo y continuo de infraestructura, redes y sistemas",
+        "Creación de documentación de TI (KB)",
+        "Resolución de incidentes, análisis de logs y causa raíz (RCA)",
+        "Escalamiento prioritario e interacción con otros equipos de infraestructura, seguridad, proyectos y gobernanza de TI",
+        "Gestión de activos y capacitación de nuevos empleados",
+        "Atención VIP y priorización de atenciones críticas",
+        "Gestión de Proveedores"
+      ],
+      "tools": "Microsoft 365 (Teams, Sharepoint, Viva Engage, Exchange, Office Suite, MDM, SSPR), Microsoft Azure AD (Portal de Microsoft Entra), VPN y Sophos Endpoint, Soporte a dispositivos móviles (Android y IOS), Impresoras multifunción y de etiquetas, escáner de escritorio, Windows 10/11, Soporte a servidores (Active Directory y File Server)"
+    },
+    {
+      "title": "Técnico de Soporte",
+      "company": "Lumini IT Solutions",
+      "period": "Abril de 2023 – Enero de 2024",
+      "location": "São Paulo, SP",
+      "responsibilities": [
+        "Técnico itinerante para cobertura de vacaciones y mantenimiento preventivo",
+        "Atención en entornos operativos 24x7 y 8x5",
+        "Monitoreo de la infraestructura de redes NOC",
+        "Participación en War Room"
+      ],
+      "tools": "Microsoft 365, Microsoft Azure AD, VPN y Sophos Endpoint, Soporte a dispositivos móviles, Impresoras multifunción y de etiquetas, Windows 10/11, Monitoreo NOC (Grafana, Zabbix y Fortinet)"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "pt": {
+    "title": "Habilidades",
+    "items": ["JavaScript", "React", "Node.js", "CSS", "HTML", "Express", "MongoDB"]
+  },
+  "en": {
+    "title": "Skills",
+    "items": ["JavaScript", "React", "Node.js", "CSS", "HTML", "Express", "MongoDB"]
+  },
+  "es": {
+    "title": "Habilidades",
+    "items": ["JavaScript", "React", "Node.js", "CSS", "HTML", "Express", "MongoDB"]
+  }
+}

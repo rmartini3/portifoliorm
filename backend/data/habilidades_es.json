@@ -1,0 +1,27 @@
+{
+  "title": "Habilidades Técnicas y Comportamentales",
+  "technicalSkills": [
+    "Soporte técnico presencial y remoto",
+    "Mantenimiento de hardware y software",
+    "Instalación y configuración de sistemas",
+    "Configuración de redes y dispositivos",
+    "Monitoreo NOC",
+    "Gestión de activos de TI"
+  ],
+  "behavioralSkills": [
+    "Atención al cliente y comunicación",
+    "Organización",
+    "Trabajo en equipo",
+    "Proactividad",
+    "Resolución de problemas",
+    "Comunicación eficiente"
+  ],
+  "managementAndMethodologies": [
+    "Gestión de Infraestructura de TI",
+    "Gestión de Usuarios",
+    "Gestión de Proveedores",
+    "Mejora de Procesos",
+    "Metodologías Ágiles",
+    "Six Sigma White Belt"
+  ]
+}

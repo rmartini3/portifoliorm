@@ -1,0 +1,30 @@
+/* Menu horizontal responsivo */
+.menu-principal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0.5rem 0 2rem 0;
+}
+.menu-principal a {
+  color: var(--primary);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.menu-principal a:hover, .menu-principal a:focus {
+  background: var(--accent);
+  color: var(--primary-foreground);
+  outline: none;
+}
+@media (max-width: 768px) {
+  .menu-principal {
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1rem;
+  }
+}
