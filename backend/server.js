@@ -1,3 +1,6 @@
+// ...existing code...
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 import express from 'express';
 import cors from 'cors';
@@ -7,62 +10,55 @@ import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const setSecurityHeaders = (res) => {
-  res.setHeader('Cache-Control', 'max-age=31536000, immutable');
-  res.setHeader('X-Content-Type-Options', 'nosniff');
-  res.setHeader('Content-Security-Policy', "frame-ancestors 'self'");
-  res.removeHeader && res.removeHeader('X-XSS-Protection');
-  res.removeHeader && res.removeHeader('X-Frame-Options');
-};
+// ...existing code...
+
+// ...existing code...
 
 const app = express();
 app.use(cors());
+app.use(express.json());
 
-// Endpoint de saúde para teste rápido do backend
-app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', message: 'API rodando!' });
-});
+const DATA_DIR = path.join(__dirname, 'data');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+function getJsonFile(file) {
+  return path.join(DATA_DIR, file + '.json');
+}
 
 app.get('/api/page/:page', (req, res) => {
   const lang = req.query.lang || 'pt';
-  const filePathLang = path.join(__dirname, 'data', `${req.params.page}_${lang}.json`);
-  const filePathDefault = path.join(__dirname, 'data', `${req.params.page}.json`);
-  fs.readFile(filePathLang, 'utf8', (err, data) => {
-    setSecurityHeaders(res);
-    if (!err) {
-      console.log(`[API] Página encontrada: ${filePathLang}`);
-      return res.json(JSON.parse(data));
+  const filePath = getJsonFile(req.params.page);
+  fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) return res.status(404).json({ error: 'Arquivo não encontrado.' });
+    try {
+      const json = JSON.parse(data);
+      res.json(json[lang] || json['pt']);
+    } catch {
+      res.status(500).json({ error: 'Erro ao ler JSON.' });
     }
-    // fallback para arquivo padrão sem sufixo de idioma
-    fs.readFile(filePathDefault, 'utf8', (err2, data2) => {
-      setSecurityHeaders(res);
-      if (!err2) {
-        console.log(`[API] Página fallback: ${filePathDefault}`);
-        return res.json(JSON.parse(data2));
-      }
-      console.error(`[API] Página não encontrada: ${filePathLang} nem ${filePathDefault}`);
-      res.status(404).json({ error: 'Página não encontrada.' });
-    });
   });
 });
 
 app.get('/api/translation/:lang', (req, res) => {
-  const filePath = path.join(__dirname, 'data', `translation_${req.params.lang}.json`);
+  const filePath = getJsonFile('translations');
   fs.readFile(filePath, 'utf8', (err, data) => {
-    setSecurityHeaders(res);
-    if (err) {
-      console.error(`[API] Tradução não encontrada: ${filePath}`);
-      return res.status(404).json({ error: 'Tradução não encontrada.' });
+    if (err) return res.status(404).json({ error: 'Arquivo não encontrado.' });
+    try {
+      const json = JSON.parse(data);
+      res.json(json[req.params.lang] || json['pt']);
+    } catch {
+      res.status(500).json({ error: 'Erro ao ler JSON.' });
     }
-    console.log(`[API] Tradução encontrada: ${filePath}`);
-    res.json(JSON.parse(data));
   });
+});
+
+app.post('/api/contact', (req, res) => {
+  // Exemplo: integração com nodemailer
+  // const { name, email, message } = req.body;
+  // ...
+  res.json({ success: true, message: 'Contato recebido!' });
 });
 
 const PORT = 3001;
 app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
+  console.log(`Servidor backend rodando na porta ${PORT}`);
 });
