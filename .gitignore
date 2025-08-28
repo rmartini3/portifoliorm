@@ -1,11 +1,1 @@
-# Variáveis de ambiente
-.env
-node_modules/
-dist/
-build/
-*.log
-.env
-*.DS_Store
-.vscode/
-pnpm-lock.yaml
-package-lock.json
+node_modules
