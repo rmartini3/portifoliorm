@@ -2,7 +2,7 @@
 
 // Importa os módulos necessários
 import express from 'express';
-import cors from 'cors';
+import cors from 'cors'; // O middleware CORS foi importado corretamente
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -22,7 +22,8 @@ const __dirname = path.dirname(__filename);
 const DATA_DIR = path.join(__dirname, 'data');
 
 // --- Middleware ---
-app.use(cors());
+// Adiciona o middleware CORS para permitir requisições do frontend
+app.use(cors()); 
 app.use(express.json());
 
 // --- Instância dos Validadores ---

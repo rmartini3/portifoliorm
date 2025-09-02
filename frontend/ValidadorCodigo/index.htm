@@ -1,16 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Validador de Códigos W3C Avançado para HTML, CSS, JavaScript com verificação de POO/UML e indentação.">
-    <title>Validador de Códigos Avançado</title>
-
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+<html lang="pt-br"> <head>
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta name="description" content="Validador de Códigos W3C Avançado para HTML, CSS, JavaScript com verificação de POO/UML e indentação."> <title>Validador de Códigos Avançado</title> <link rel="stylesheet" href="css/layout.css"> <link rel="stylesheet" href="css/style.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
         .visually-hidden {
             position: absolute;
@@ -26,17 +17,73 @@
     </style>
 </head>
 <body>
+    <div id="loader-overlay" class="loader-overlay hidden">
+        <div class="spinner"></div> </div>
+
+    <header>
+        <div class="header-content">
+            <h1>Validador de Códigos Avançado</h1> <p class="description">Valide HTML, CSS, JS com verificações de POO/UML e indentação</p> </div>
+    </header>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="input-panel panel">
+                <div class="form-group">
+                    <label for="languageSelect">Selecione a Linguagem:</label>
+                    <div class="select-wrapper">
+                        <select id="languageSelect"> <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="javascript">JavaScript</option>
+                        </select>
+                        <i class="fas fa-chevron-down select-arrow"></i> </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="codeInput">Digite seu código:</label>
+                    <textarea id="codeInput" placeholder="Cole seu código aqui..."></textarea> </div>
+
+                <div class="options-group">
+                    <p>Opções de Validação:</p>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="checkIndentation" checked> <span class="checkbox-custom"></span> Verificar Indentação
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="checkOOP"> <span class="checkbox-custom"></span> Verificar POO/UML (apenas JS)
+                    </label>
+                </div>
+
+                <div class="actions">
+                    <button id="runButton" class="btn-primary"><i class="fas fa-play"></i> Validar Código</button> <button class="example-btn btn-secondary"><i class="fas fa-file-code"></i> Exemplo de Código</button> </div>
+
+                <div class="language-info panel" id="languageTips">
+                    <p class="current-language-info"><i class="fas fa-language"></i> Linguagem selecionada: <strong id="currentLanguage">HTML</strong></p> <p class="tip-of-the-day" id="tipOfTheDay">💡 Dica: Dica do dia será exibida aqui.</p> </div>
+            </div>
+
+            <div class="output-panel panel">
+                <h3><i class="fas fa-clipboard-list"></i> Resultado da Validação</h3> <div class="chat-box" id="chatBox"> </div>
+                <button id="clearButton" class="btn-secondary mt-10"><i class="fas fa-eraser"></i> Limpar Chat</button> </div>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popupOverlay"></div>
+
     <div class="popup" id="popup">
         <div class="popup-header">
-            <h2 id="popupTitle">Exemplo de Código</h2>
-            <button class="close-btn">
+            <h2 id="popupTitle">Exemplo de Código</h2> <button class="close-btn">
                 <i class="fas fa-times"></i>
                 <span class="visually-hidden">Fechar popup</span>
-            </button>
-        </div>
-        </div>
+            </button> </div>
+        <div id="popup-conteudo">
+            <p id="popupExplanation">Aqui você verá um exemplo de código para a linguagem selecionada.</p> <pre class="code-example" id="popup-exemplo"></pre> </div>
+        <div class="popup-actions">
+            <button id="copyButton" class="btn-primary"><i class="fas fa-copy"></i> Copiar Código</button> <button id="useExampleButton" class="btn-secondary"><i class="fas fa-check"></i> Usar Este Exemplo</button> </div>
+    </div>
 
     <script src="js/app.js" type="module"></script>
     <div id="language-warning-banner" class="warning-banner hidden"></div>
+
+    <footer>
+        <p>&copy; 2023 Validador de Códigos Avançado. Todos os direitos reservados. | Validado por <a href="https://www.w3.org/" target="_blank" rel="noopener noreferrer">W3C</a></p>
+    </footer>
 </body>
 </html>

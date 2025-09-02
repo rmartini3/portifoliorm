@@ -143,31 +143,34 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (!response.ok) {
-                const errorData = await response.json();
-                throw new Error(errorData.error || `Erro de servidor: ${response.status}`);
+                let errorMessage = `Erro de servidor: ${response.status}`;
+                try {
+                    const errorData = await response.json();
+                    errorMessage = errorData.error || errorMessage;
+                // eslint-disable-next-line no-unused-vars
+                } catch (jsonError) {
+                    // Se a resposta não for JSON, usamos a mensagem padrão
+                }
+                throw new Error(errorMessage);
             }
 
             const data = await response.json();
-            
-            // Exibe os resultados recebidos do servidor no chat
+
             if (data.validationResults && data.validationResults.length > 0) {
                 data.validationResults.forEach(result => {
-                    if (result.type === 'syntax') {
-                        // A sua lógica de exibição de resultados precisa ser adaptada para o novo formato
-                        // A lógica do SyntaxValidator precisa ser exposta para cá.
-                        chatManager.adicionarMensagem(result.messages, 'assistant-message');
-                    } else if (result.type === 'indentation') {
-                        chatManager.adicionarMensagem(result.result, 'assistant-message');
-                    } else if (result.type === 'oop') {
-                        chatManager.adicionarMensagem(result.result, 'assistant-message');
-                    }
+                    chatManager.adicionarMensagem(result.messages || result.result, 'assistant-message');
                 });
             } else {
                  chatManager.adicionarMensagem("Nenhum problema encontrado no código!", 'assistant-message success');
             }
 
         } catch (error) {
-            chatManager.adicionarMensagem(`<p class="error">❌ Erro na comunicação com o servidor: ${error.message}.</p>`, 'assistant-message error');
+            // Verifica se é um erro de rede ou de servidor
+            if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
+                chatManager.adicionarMensagem(`<p class="error">❌ Erro de conexão: Não foi possível alcançar o servidor. Por favor, verifique se o backend está em execução.</p>`, 'assistant-message error');
+            } else {
+                chatManager.adicionarMensagem(`<p class="error">❌ Erro na comunicação com o servidor: ${error.message}.</p>`, 'assistant-message error');
+            }
         } finally {
             hideLoader();
         }
@@ -220,4 +223,4 @@ document.addEventListener('DOMContentLoaded', () => {
     if (languageSelect) updateLanguageInfo(languageSelect.value);
     themeManager.loadTheme();
     clearChat();
-})
+});
