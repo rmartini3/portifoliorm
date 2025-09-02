@@ -1,0 +1,47 @@
+
+
+/*
+    PSEUDOCÓDIGO DE CONSTRUÇÃO:
+    1. Configurações globais (box-sizing, fontes, cores).
+    2. Definição de variáveis CSS para manter a consistência.
+    3. Estilos gerais para elementos como <body>, <h1>, <p>, etc.
+    4. Estilos para classes de utilidade (.container, .section-padding, .cta-button).
+    5. Estilos para o cabeçalho (#main-header) e navegação (#main-nav).
+    6. Estilos para as seções principais (#hero-section, #servicos, #mercado, #sobre, #contato).
+    7. Estilos para elementos específicos dentro das seções (.hero-title, .services-grid, .data-item).
+    8. Estilos para o rodapé (#main-footer).
+    9. Media Queries para garantir a responsividade em telas menores.
+
+    IDENTIFICAÇÃO DE ELEMENTOS CSS:
+    - # (hash): Representa um ID único. Ex: #main-header
+    - . (ponto): Representa uma classe. Ex: .container
+    - : (dois-pontos): Representa uma pseudo-classe. Ex: :hover, :focus
+    - :: (dois-pontos duplos): Representa um pseudo-elemento. Ex: ::before, ::after
+    - Seletor de elemento (tag): Ex: body, h1, a
+    - Seletor de atributo []: Ex: input[type="text"]
+*/
+
+/* --- VARIÁVEIS CSS --- */
+:root {
+--primary-color: #2c3e50; /* Azul escuro */
+--secondary-color: #34495e; /* Cinza escuro */
+--accent-color: #f39c12; /* Laranja */
+--light-color: #ecf0f1; /* Cinza claro */
+--dark-color: #2c3e50; /* Azul escuro */
+
+/* Fontes */
+--font-heading: 'Georgia', serif;
+--font-body: 'Arial', sans-serif;
+
+/* Espaçamento */
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+}
+
+/* --- ESTILOS GERAIS --- */
+* {
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura */
+    margin: 0;
+    padding: 0;
+}
