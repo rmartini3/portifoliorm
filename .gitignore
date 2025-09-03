@@ -1,11 +1,21 @@
-# Ignorar a pasta de dependências do Node.js
+# Node.js
 node_modules/
-
-# Ignorar arquivos de variáveis de ambiente
-.env
-
-# Ignorar a pasta de compilação (gerada pelo Vite, neste caso)
 dist/
-
-# Ignorar o cache de dependências do Vite
 .vite/
+pnpm-lock.yaml
+
+# Variáveis de Ambiente e Arquivos de Configuração Ocultos
+.env
+.DS_Store # Arquivos do macOS
+.vscode/ # Configurações do VSCode
+.idea/   # Configurações do WebStorm/IntelliJ
+
+# Logs e arquivos de cache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
